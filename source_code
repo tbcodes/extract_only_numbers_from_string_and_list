@@ -1,0 +1,53 @@
+# Udemy course: https://www.udemy.com/course/python-para-el-mundo-real/
+
+# ➗➗➗➗➗➗➗➗➗➗➗➗➗➗➗➗➗
+# How to extract only numbers from a string
+# ➗➗➗➗➗➗➗➗➗➗➗➗➗➗➗➗➗
+
+
+def get_numbers(str):
+  
+  # Method 1
+  
+  # final_str = ""
+  # for i in str:
+  #   if i.isdigit():
+  #     final_str += i
+
+  # return final_str
+
+  # Method 2:
+  
+  mystr = [i for i in str if i.isdigit()]
+  print(mystr)
+  final = " ".join(mystr)
+  # print(type(final))
+  return final
+
+
+print(get_numbers("Hola123Adios987"))
+
+
+# ➗➗➗➗➗➗➗➗➗➗➗➗➗➗➗➗
+# How to extract only numbers from a list
+# ➗➗➗➗➗➗➗➗➗➗➗➗➗➗➗➗
+
+
+def detect_num(lst):
+
+  # Method 1:
+
+  # final_str = []
+  # for i in lst:
+  #   if isinstance(i, (int, float)):
+  #     final_str.append(i)
+
+  # return final_str
+
+  # Method 2:
+  
+  return [i for i in lst if isinstance(i, (int, float))]
+
+
+
+print(detect_num([5, "hi", 2, 28, "bye", 34.5, 40.80, 120.8, "Mine", 333]))
